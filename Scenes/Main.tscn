@@ -49,8 +49,3 @@ cell_size = Vector2( 128, 64 )
 show_collision = true
 format = 1
 tile_data = PoolIntArray( -131049, 30, 0, 131090, 77, 0, 131094, 132, 0, 393234, 11, 0, 393235, 8, 0, 458781, 77, 0, 786454, 20, 0, 917527, 77, 0 )
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2( 1068, 1358 )
-current = true
-zoom = Vector2( 2, 2 )
