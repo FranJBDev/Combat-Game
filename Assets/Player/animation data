@@ -1,6 +1,6 @@
 West
 Idle_W: 0 - 3 dur. .8 snap 0.2 (4 frames)
-Walk_W: 4 - 11 dur. .8 snap 0.1 (8 frames)
+Walk_W: 4 - 11 dur. .8 snap 0.1 (8 frames) 
 Atack_W: 12 - 15
 Spell_W: 16 - 19
 Death_W: 20 - 27

@@ -316,23 +316,21 @@ tracks/0/keys = {
 }
 
 [node name="Player" type="KinematicBody2D"]
-collision_layer = 3
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 2, 2 )
 texture = ExtResource( 1 )
 hframes = 28
 vframes = 8
 frame = 85
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-position = Vector2( 3.5, 23 )
-scale = Vector2( 1.35, 1 )
-polygon = PoolVector2Array( -19.6296, 4, -12.963, -2, -3.33333, -6, 6.2963, -3, 12.2222, 2, 7.03704, 12, -3.33333, 15, -15.9259, 11 )
+position = Vector2( 15, 53 )
+polygon = PoolVector2Array( -54, 8, -27, -9, -27, -9, -3, -18, 21, -5, 40, 7, 19, 17, -1, 28, -31, 16 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
-zoom = Vector2( 0.5, 0.5 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/Attack_N = SubResource( 12 )

@@ -12,6 +12,10 @@ func _unhandled_input(event):
 	if event.is_action_pressed("Click"):
 		moving = true
 		destination = get_global_mouse_position()
+		print("mouse ", destination)
+#	if event is InputEventScreenTouch and event.pressed == true: # Detect touch screen pressed
+#		print( "touch ", event.position)
+#		destination = event.position  # the position of the touch
 
 func _process(delta):
 	AnimationLoop()
@@ -28,10 +32,11 @@ func MovementLoop(delta):
 		speed = max_speed
 	movement = position.direction_to(destination) * speed
 	
-	print("grados ", move_direction)
+#	print("grados ", move_direction)
 	if position.distance_to(destination) > 5:
 		# calculates the angle in degrees to the point clicked
 		move_direction = rad2deg(destination.angle_to_point(position)) 
+#		movement = move_and_collide(movement)
 		movement = move_and_slide(movement)
 	else:
 		moving = false
@@ -57,7 +62,7 @@ func AnimationLoop():
 	elif move_direction <= -165 or move_direction >= 165:
 		anim_direction = "W"
 		
-	print(anim_direction)
+#	print(anim_direction)
 	if moving:
 		anim_mode = "Walk"
 	else:
