@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Resources/Floor.tres" type="TileSet" id=1]
 [ext_resource path="res://Resources/Library.tres" type="TileSet" id=2]
 [ext_resource path="res://Resources/Walls.tres" type="TileSet" id=3]
 [ext_resource path="res://Resources/Stuffs.tres" type="TileSet" id=4]
+[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=5]
 
 [node name="Main" type="Node2D"]
 __meta__ = {
@@ -49,3 +50,6 @@ cell_size = Vector2( 128, 64 )
 show_collision = true
 format = 1
 tile_data = PoolIntArray( -131049, 30, 0, 131090, 77, 0, 131094, 132, 0, 393234, 11, 0, 393235, 8, 0, 458781, 77, 0, 786454, 20, 0, 917527, 77, 0 )
+
+[node name="Player" parent="." instance=ExtResource( 5 )]
+position = Vector2( 839, 1320 )
