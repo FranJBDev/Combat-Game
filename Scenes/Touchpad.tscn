@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Assets/Touchpad/right.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Touchpad/down.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Touchpad/up.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Touchpad/left.png" type="Texture" id=4]
+[ext_resource path="res://Scripts/Touchpad.gd" type="Script" id=5]
+
+[node name="Touchpad" type="Control"]
+modulate = Color( 1, 1, 1, 0.403922 )
+script = ExtResource( 5 )
+
+[node name="Up" type="TouchScreenButton" parent="."]
+position = Vector2( -31, -76 )
+normal = ExtResource( 3 )
+
+[node name="Down" type="TouchScreenButton" parent="."]
+position = Vector2( -31, 22 )
+normal = ExtResource( 2 )
+
+[node name="Left" type="TouchScreenButton" parent="."]
+position = Vector2( -88, -26 )
+normal = ExtResource( 4 )
+
+[node name="Right" type="TouchScreenButton" parent="."]
+position = Vector2( 23, -27 )
+normal = ExtResource( 1 )
+
+[connection signal="pressed" from="Up" to="." method="_on_Up_pressed"]
+[connection signal="released" from="Up" to="." method="_on_Up_released"]
+[connection signal="pressed" from="Down" to="." method="_on_Down_pressed"]
+[connection signal="released" from="Down" to="." method="_on_Down_released"]
+[connection signal="pressed" from="Left" to="." method="_on_Left_pressed"]
+[connection signal="released" from="Left" to="." method="_on_Left_released"]
+[connection signal="pressed" from="Right" to="." method="_on_Right_pressed"]
+[connection signal="released" from="Right" to="." method="_on_Right_released"]
