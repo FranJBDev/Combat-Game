@@ -9,6 +9,7 @@ var move_direction = Vector2(0, 0) # input for the animation player
 var moving = false # activate movemnet and reset speed to zero if we would still
 var destination = Vector2() # where the mouse click happened
 var movement = Vector2() # The movement that we will pushed to the engine
+var anim_direction = "S"
 
 func _unhandled_input(event):
 	if input_type == "point":
@@ -52,8 +53,7 @@ func MovementLoop(delta):
 		var motion = move_direction.normalized() * 400 # speed
 		move_and_slide(motion)
 		
-func AnimationLoop():
-	var anim_direction = "S"
+func AnimationLoop():	
 	var anim_mode = "Idle"
 	var animation
 	

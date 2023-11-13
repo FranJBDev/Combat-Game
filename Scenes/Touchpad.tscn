@@ -12,19 +12,27 @@ script = ExtResource( 5 )
 
 [node name="Up" type="TouchScreenButton" parent="."]
 position = Vector2( -31, -76 )
+z_index = 1
 normal = ExtResource( 3 )
+visibility_mode = 1
 
 [node name="Down" type="TouchScreenButton" parent="."]
 position = Vector2( -31, 22 )
+z_index = 1
 normal = ExtResource( 2 )
+visibility_mode = 1
 
 [node name="Left" type="TouchScreenButton" parent="."]
 position = Vector2( -88, -26 )
+z_index = 1
 normal = ExtResource( 4 )
+visibility_mode = 1
 
 [node name="Right" type="TouchScreenButton" parent="."]
 position = Vector2( 23, -27 )
+z_index = 1
 normal = ExtResource( 1 )
+visibility_mode = 1
 
 [connection signal="pressed" from="Up" to="." method="_on_Up_pressed"]
 [connection signal="released" from="Up" to="." method="_on_Up_released"]
