@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=49 format=2]
+[gd_resource type="TileSet" load_steps=50 format=2]
 
 [ext_resource path="res://Assets/Stuffs/barrels_S.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Stuffs/barrels_N.png" type="Texture" id=2]
@@ -49,6 +49,9 @@
 [ext_resource path="res://Assets/Stuffs/woodenSupports_E.png" type="Texture" id=47]
 [ext_resource path="res://Assets/Stuffs/woodenSupports_N.png" type="Texture" id=48]
 
+[sub_resource type="ConvexPolygonShape2D" id=1]
+points = PoolVector2Array( 48, 384, 64, 384, 208, 448, 208, 448, 192, 464, 160, 480, 160, 480, 128, 464, 96, 448, 64, 432, 48, 416 )
+
 [resource]
 0/name = "BarrelsStackedE"
 0/texture = ExtResource( 7 )
@@ -88,9 +91,16 @@
 2/navigation_offset = Vector2( 128, 256 )
 2/shape_offset = Vector2( 0, 0 )
 2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape = SubResource( 1 )
 2/shape_one_way = false
-2/shape_one_way_margin = 0.0
-2/shapes = [  ]
+2/shape_one_way_margin = 1.0
+2/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 1 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
 2/z_index = 0
 3/name = "BarrelsStackedW"
 3/texture = ExtResource( 3 )

@@ -9,19 +9,20 @@ var move_direction = Vector2(0, 0) # input for the animation player
 var moving = false # activate movemnet and reset speed to zero if we would still
 var destination = Vector2() # where the mouse click happened
 var movement = Vector2() # The movement that we will pushed to the engine
-var anim_direction = "S"
+var anim_direction
 
 func _unhandled_input(event):
 	if input_type == "point":
 		if event.is_action_pressed("Click"):
 			moving = true
 			destination = get_global_mouse_position()
-#			print("mouse ", destination)
 		
 #	For touch screen
 #	if event is InputEventScreenTouch and event.pressed == true: # Detect touch screen pressed
-#		print( "touch ", event.position)
 #		destination = event.position  # the position of the touch
+
+func _ready():
+	anim_direction = "S"
 
 func _process(delta):
 	AnimationLoop()
@@ -47,6 +48,7 @@ func MovementLoop(delta):
 			movement = move_and_slide(movement)
 		else:
 			moving = false
+			
 	if input_type == "keys":
 		move_direction.x = int(Input.is_action_pressed("ui_right")) - int(Input.is_action_pressed("ui_left"))
 		move_direction.y = int(Input.is_action_pressed("ui_down")) - int(Input.is_action_pressed("ui_up")) / float(2)
@@ -80,12 +82,13 @@ func AnimationLoop():
 			anim_mode = "Idle"
 			
 	if input_type == "keys":
+		print(move_direction)
 		match move_direction:
 			Vector2(-1, 0):
 				anim_direction = "W"
 			Vector2(1, 0):
 				anim_direction = "E"
-			Vector2(0, 0.5):
+			Vector2(0, 1):
 				anim_direction = "S"
 			Vector2(0, -0.5):
 				anim_direction = "N"
@@ -103,5 +106,6 @@ func AnimationLoop():
 			anim_mode = "Idle"
 			
 	animation = anim_mode + "_" + anim_direction
+#	print (animation)
 	get_node("AnimationPlayer").play(animation)
 	
