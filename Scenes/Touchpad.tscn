@@ -39,6 +39,7 @@ visibility_mode = 1
 position = Vector2( 677, -26 )
 z_index = 1
 normal = ExtResource( 6 )
+visibility_mode = 1
 
 [connection signal="pressed" from="Up" to="." method="_on_Up_pressed"]
 [connection signal="released" from="Up" to="." method="_on_Up_released"]
