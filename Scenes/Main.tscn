@@ -1,9 +1,8 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Resources/Floor.tres" type="TileSet" id=1]
 [ext_resource path="res://Resources/Stuffs.tres" type="TileSet" id=4]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Scenes/Props/Library/DisplayCaseWSword_E.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Resources/EasyWalls.tres" type="TileSet" id=7]
 
 [node name="Main" type="Node2D"]
@@ -31,6 +30,8 @@ tile_data = PoolIntArray( -131062, 42, 0, -131057, 41, 0, 7, 41, 0, 196615, 40, 
 mode = 1
 tile_set = ExtResource( 7 )
 cell_size = Vector2( 256, 128 )
+collision_layer = 2
+collision_mask = 5
 format = 1
 tile_data = PoolIntArray( -65528, 6, 0, -65527, 2, 0, -65526, 2, 0, -65525, 2, 0, -65524, 2, 0, -65523, 2, 0, -65522, 2, 0, -65521, 2, 0, -65520, 2, 0, -65519, 7, 0, 8, 0, 0, 65544, 0, 0, 131080, 0, 0, 196616, 0, 0, 262152, 0, 0, 327688, 0, 0, 393224, 0, 0, 458760, 0, 0, 524296, 4, 0 )
 
@@ -39,16 +40,14 @@ mode = 1
 tile_set = ExtResource( 4 )
 cell_size = Vector2( 256, 128 )
 show_collision = true
+collision_layer = 2
+collision_mask = 5
 format = 1
 tile_data = PoolIntArray( -65526, 2, 0, -65522, 2, 0 )
 
 [node name="Test" type="YSort" parent="."]
 
-[node name="DisplayCaseWSword_E" parent="Test" instance=ExtResource( 6 )]
-visible = false
-position = Vector2( 463, 1204 )
-
-[node name="Player" parent="Test" instance=ExtResource( 5 )]
+[node name="Player" parent="." instance=ExtResource( 5 )]
 position = Vector2( 1132, 1302 )
 collision_mask = 2
 
@@ -57,6 +56,8 @@ mode = 1
 tile_set = ExtResource( 7 )
 cell_size = Vector2( 256, 128 )
 show_collision = true
+collision_layer = 2
+collision_mask = 5
 format = 1
 tile_data = PoolIntArray( 17, 3, 0, 65553, 3, 0, 131089, 3, 0, 196625, 3, 0, 262161, 3, 0, 327697, 3, 0, 393233, 3, 0, 458769, 3, 0, 524297, 1, 0, 524298, 1, 0, 524299, 1, 0, 524300, 1, 0, 524301, 1, 0, 524302, 1, 0, 524303, 1, 0, 524304, 1, 0, 524305, 5, 0 )
 
@@ -65,5 +66,7 @@ mode = 1
 tile_set = ExtResource( 4 )
 cell_size = Vector2( 256, 128 )
 show_collision = true
+collision_layer = 2
+collision_mask = 5
 format = 1
 tile_data = PoolIntArray( 65554, 3, 0, 196626, 26, 0, 327698, 3, 0, 458770, 26, 0, 589833, 2, 0, 589836, 30, 0, 589840, 2, 0 )

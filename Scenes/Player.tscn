@@ -367,3 +367,8 @@ visible = false
 position = Vector2( -281, 142 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 4 )
+
+[node name="TurnAxis" type="Position2D" parent="."]
+
+[node name="CastPoint" type="Position2D" parent="TurnAxis"]
+position = Vector2( 50, 0 )

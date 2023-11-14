@@ -23,3 +23,9 @@ func _on_Right_pressed():
 
 func _on_Right_released():
 	Input.action_release("ui_right")
+
+func _on_Shoot_pressed():
+	Input.action_press("ui_accept")
+
+func _on_Shoot_released():
+	Input.action_release("ui_accept")
